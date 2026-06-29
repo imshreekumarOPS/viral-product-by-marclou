@@ -17,18 +17,58 @@ The `viral-product` skill represents a no-BS framework for designing products th
 3. **Aesthetics & UX**: Minimal color palettes (3 colors max), one idea per screen, and showing the product before explaining it.
 4. **Viral Mechanics**: OG image design, shareable footers, and naming conventions.
 
-## 🤖 How AI Agents Can Use This Skill
+## ⚙️ How to Install & Use the Skill
 
-This folder is structured to be compatible with agent customization protocols (such as standard workspace configurations).
+AI agents automatically discover and load skills from two primary customization roots. You can install the `viral-product` skill either locally (workspace-level) or globally.
 
-### Integration
-To load this skill, copy or link the [viral-product](file:///c:/Users/indcr/OneDrive/Desktop/prodduct/viral-product) directory into your agent's customization directory:
-```bash
-# Example structure:
-.agents/
+### Option 1: Workspace Installation (Local Project)
+
+To enable this skill for a specific project, place the `viral-product` directory inside your project's `.agents/skills/` directory:
+
+1. Create the `.agents/skills/` folder at the root of your workspace if it doesn't exist.
+2. Copy or symlink the `viral-product` directory there.
+
+**Target Structure:**
+```text
+your-project-root/
+└── .agents/
+    └── skills/
+        └── viral-product/
+            └── SKILL.md
+```
+
+#### Alternative: Custom/Non-Standard Paths
+If you prefer to keep the skill in a shared or custom folder outside `.agents/skills/`, register it in the `.agents/skills.json` file at your project's root:
+```json
+{
+  "entries": [
+    { "path": "path/to/viral-product" }
+  ]
+}
+```
+
+---
+
+### Option 2: Global Installation (All Projects)
+
+To make the skill globally available to your agent across all workspaces, install it in the global configurations directory:
+
+- **Windows:** `C:\Users\<YourUsername>\.gemini\config\skills\viral-product`
+- **macOS / Linux:** `~/.gemini/config/skills/viral-product`
+
+**Target Structure:**
+```text
+~/.gemini/config/
 └── skills/
     └── viral-product/
         └── SKILL.md
 ```
 
-Once loaded, the agent can trigger this skill whenever auditing landing pages, proposing pricing strategies, or writing high-conversion copy.
+---
+
+## 🤖 How the Agent Uses This Skill
+
+Once installed and loaded, the agent will automatically discover the `viral-product` skill when analyzing, auditing, or creating product pages. You can trigger it during conversations when:
+- Auditing landing page layouts and visual hierarchy.
+- Proposing pricing and monetization strategies.
+- Drafting high-conversion copywriting and headlines.
