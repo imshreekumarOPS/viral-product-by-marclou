@@ -66,16 +66,16 @@ To make the skill globally available to your agent across all workspaces, instal
 
 ---
 
-### Option 3: Installation via `skills.sh` Package Manager (npx)
+### Option 3: Installation via `skills` Package Manager (npx)
 
-If your agent environment supports the `skills.sh` registry, you can install the skill automatically using the `skills` CLI wrapper:
+If your agent environment supports the `skills` registry, you can install the skill automatically using the `skills` CLI wrapper:
 
 ```bash
 # Using the skills CLI
 npx skills add imshreekumarOPS/viral-product-by-marclou
 
-# Shorthand method
-npx skill.sh add imshreekumarOPS/viral-product-by-marclou
+npx skills add https://github.com/imshreekumarOPS/viral-product-by-marclou
+
 ```
 
 This will automatically pull the skill from the repository and place it into the correct directory for your AI agent.
